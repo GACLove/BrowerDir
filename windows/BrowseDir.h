@@ -1,6 +1,6 @@
 ﻿
-#ifndef __CBROWSE_DIR_H__
-#define __CBROWSE_DIR_H__
+#ifndef _BROWSEDIR_H_
+#define _BROWSEDIR_H_
 
 #include <stdlib.h>
 #include <string.h>
@@ -8,17 +8,8 @@
 #include <stdio.h> 
 #include <vector>
 #include <iostream>
-
-#if WIN32
 #include <io.h>
 #include <direct.h>
-#else   // linux
-#include <unistd.h>
-#include <stdio.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#endif
-
 
 class CBrowseDir
 {
@@ -62,4 +53,4 @@ protected:
     virtual void ProcessDir(const char *currentdir, const char *parentdir);
 };
 
-#endif
+#endif  //_BROWSEDIR_H_
